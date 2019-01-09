@@ -1,8 +1,3 @@
-{"NoContrato":"3","Nombre":"Ariel","Apellido":"Batista","Puesto":"Gerente","Categoria":"Investigador","TipoContrato":"Indefinido","Sueldo":"6000","NoCandidato":"3","FechaInicio":"01-01-2018","FechaFin":"01-02-2019","_id":"i59pMbm8y5rVaDo0"}
-{"NoCandidato":4,"Nombre":"Francisca","Apellido":"Gomez","Puesto":"Periodista","Categoria":"Gerente","Tipo de contrato":"Indeterminado","Sueldo":100,"NoContrato":2,"Fecha Inicio":"09-01-2019","Fecha Fin":"09-03-2019","_id":"1VjGYbaJ85Iwv3dF"}
-{"$$deleted":true,"_id":"1VjGYbaJ85Iwv3dF"}
-{"NoCandidato":5,"Nombre":"Chanell","Apellido":"Gomez","Puesto":"Periodista","Categoria":"Gerente","Tipo de contrato":"Indeterminado","Sueldo":100,"NoContrato":2,"Fecha Inicio":"09-01-2019","Fecha Fin":"09-03-2019","_id":"Ax5jqwUSo4wWJmcX"}
-{"NoCandidato":6,"Nombre":"Rocio","Apellido":"Gomez","Puesto":"Periodista","Categoria":"Gerente","Tipo de contrato":"Indeterminado","Sueldo":100,"NoContrato":2,"Fecha Inicio":"09-01-2019","Fecha Fin":"09-03-2019","_id":"cykq3oJLsu44h9c6"}
-{"NoCandidato":7,"Nombre":"Rocio","Apellido":"Gomez","Puesto":"Periodista","Categoria":"Gerente","Tipo de contrato":"Indeterminado","Sueldo":100,"NoContrato":2,"Fecha Inicio":"09-01-2019","Fecha Fin":"09-03-2019","_id":"GQMoqNl7yzOHe44B"}
-{"$$deleted":true,"_id":"GQMoqNl7yzOHe44B"}
-{"$$deleted":true,"_id":"Ax5jqwUSo4wWJmcX"}
+{"NoCandidato":"1","Nombre":"Maria","Apellido":"Soto","Puesto":"Investigadora","Categoria":"Gerente","Tipo de contrato":"Indeterminado","Sueldo":100,"NoContrato":1,"Fecha Inicio":"09-01-2019","Fecha Fin":"09-03-2019","_id":"ghSnuB3dJc4j4pzt"}
+{"NoContrato":"2","Nombre":"Francisca","Apellido":"Gonzalez","Puesto":"Investigador","Categoria":"programacion","TipoContrato":"Indeterminado","Sueldo":"500","NoCandidato":"2","FechaInicio":"01-02-2018","FechaFin":"01-01-2019","_id":"4lrzQhHXr3aAdKwA"}
+{"$$deleted":true,"_id":"4lrzQhHXr3aAdKwA"}

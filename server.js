@@ -19,7 +19,7 @@ const CONTACTS_APP_DIR = "/dist/contrato-int";
 });
  var initialcontratos = [
 
-    {"NoCandidato": 1, "Nombre": "Maria" ,"Apellido": "Soto", 
+    {"NoCandidato": "1", "Nombre": "Maria" ,"Apellido": "Soto", 
     "Puesto":"Investigadora", "Categoria":"Gerente", "Tipo de contrato":"Indeterminado","Sueldo":100,"NoContrato":1,
     "Fecha Inicio":"09-01-2019", "Fecha Fin":"09-03-2019"}
  ];
@@ -127,7 +127,7 @@ const CONTACTS_APP_DIR = "/dist/contrato-int";
 
  app.delete(BASE_API_PATH + "/contratos/:NoCandidato", (req, res) => {
      // Delete a single contrato
-     var NoCandidato = parseInt (req.params.NoCandidato);
+     var NoCandidato = req.params.NoCandidato
      
      console.log(Date()+" - DELETE /contratos/"+NoCandidato);
 

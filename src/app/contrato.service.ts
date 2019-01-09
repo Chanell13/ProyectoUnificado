@@ -49,6 +49,15 @@ private handleError<T> (operation = 'operation', result?: T) {
       );
   }
 
+  getContrato(id: string): any {
+    const url = `${this.contratosUrl}/contratos/${id}`;
+    return this.http.get<Contrato>(url)
+      .pipe(
+          tap(() => this.log('fetched contratos')),
+          catchError(this.handleError('getContratos', []))
+      );
+  }
+
   addContrato(contrato: Contrato): Observable<any> {
     // tslint:disable-next-line:prefer-const
     let headers = new HttpHeaders({ 'Content-Type': 'application/json' });

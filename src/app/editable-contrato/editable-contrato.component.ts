@@ -18,13 +18,17 @@ export class EditableContratoComponent implements OnInit {
       this.editing = ! this.editing;
   }
 
-
+  onPrint(NoContrato): void {
+    console.log(NoContrato);
+}
 
 
   onDelete(): void {
       this.deleting = ! this.deleting;
 
       this.contratoService.deleteContrato(this.contrato).subscribe();
+
+      location.reload(); //refresca la pagina completa
   }
 
 

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ContratosComponent } from './contratos/contratos.component';
 import { EditableContratoComponent } from './editable-contrato/editable-contrato.component';
 import { EliminableContratoComponent } from './eliminable-contrato/eliminable-contrato.component';
+import { ImprimirComponent } from './imprimir/imprimir.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { EliminableContratoComponent } from './eliminable-contrato/eliminable-co
     ContratosComponent,
     AppComponent,
     EditableContratoComponent,
-    EliminableContratoComponent
+    EliminableContratoComponent,
+    ImprimirComponent
   ],
   imports: [
     FormsModule,
