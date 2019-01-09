@@ -84,7 +84,7 @@ const CONTACTS_APP_DIR = "/dist/contrato-int";
      res.sendStatus(405);
  }); 
 
- app.delete(BASE_API_PATH + "/contratos", (req, res) => {
+ /*app.delete(BASE_API_PATH + "/contratos", (req, res) => {
      // Remove all contratos
      console.log(Date()+" - DELETE /contratos");
 
@@ -92,7 +92,7 @@ const CONTACTS_APP_DIR = "/dist/contrato-int";
      
      res.sendStatus(200);
  });
-
+*/
 
  app.post(BASE_API_PATH + "/contratos/:NoCandidato", (req, res) => {
      // Forbidden
@@ -125,13 +125,13 @@ const CONTACTS_APP_DIR = "/dist/contrato-int";
  });
 
 
- app.delete(BASE_API_PATH + "/contratos/:Nombre", (req, res) => {
+ app.delete(BASE_API_PATH + "/contratos/:NoCandidato", (req, res) => {
      // Delete a single contrato
-     var Nombre = req.params.Nombre;
+     var NoCandidato = parseInt (req.params.NoCandidato);
      
-     console.log(Date()+" - DELETE /contratos/"+Nombre);
+     console.log(Date()+" - DELETE /contratos/"+NoCandidato);
 
-     db.remove({"Nombre": Nombre},{},(err,numRemoved)=>{
+     db.remove({NoCandidato: NoCandidato},{},(err,numRemoved)=>{
          if(err){
              console.error("Error accesing DB");
              res.sendStatus(500);

@@ -75,10 +75,10 @@ private handleError<T> (operation = 'operation', result?: T) {
   deleteContrato(contrato: Contrato): Observable<any> {
     // tslint:disable-next-line:prefer-const
     let headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    const url = `${this.contratosUrl}/contratos/${contrato.Nombre}`;
+    const url = `${this.contratosUrl}/contratos/${contrato.NoCandidato}`;
     return this.http.delete(url, {responseType: 'text', headers: headers})
         .pipe(
-          tap(() => this.log(`delete contrato Nombre=${contrato.Nombre}`)),
+          tap(() => this.log(`delete contrato NoCandidato=${contrato.NoCandidato}`)),
           catchError(this.handleError('deleteContrato', []))
       );
   }
