@@ -37,10 +37,10 @@ kubectl config --kubeconfig=config-demo set-cluster scratch --server=https://5.6
 kubectl config --kubeconfig=config-demo set-credentials developer --client-certificate=fake-cert-file --client-key=fake-key-seefile
 kubectl config --kubeconfig=config-demo set-credentials experimenter --username=exp --password=some-password
 
-######5) Add context details to your configuration file:
+###### 5) Add context details to your configuration file:
 kubectl config --kubeconfig=config-demo set-context dev-frontend --cluster=development --namespace=frontend --user=developer
 kubectl config --kubeconfig=config-demo set-context dev-storage --cluster=development --namespace=storage --user=developer
 kubectl config --kubeconfig=config-demo set-context exp-scratch --cluster=scratch --namespace=default --user=experimenter
 
-######6) Use the cluster:
+###### 6) Use the cluster:
 kubectl config --kubeconfig=config-default use-context dev-frontend
