@@ -1,29 +1,45 @@
-# H1 Set-Default Cluster
+# Set-Default Cluster
 
-ContratoInt
+######1)Create file config-default
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+######2)Example:
 
-## Development server
+```
+apiVersion: v1
+kind: Config
+preferences: {}
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+clusters:
+- cluster:
+  name: development
+- cluster:
+  name: scratch
 
-## Code scaffolding
+users:
+- name: developer
+- name: experimenter
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+contexts:
+- context:
+  name: dev-frontend
+- context:
+  name: dev-storage
+- context:
+  name: exp-scratch
+```
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+######3)Add cluster details to your configuration file:
+kubectl config --kubeconfig=config-demo set-cluster development --server=https://1.2.3.4 --certificate-authority=fake-ca-file
+kubectl config --kubeconfig=config-demo set-cluster scratch --server=https://5.6.7.8 --insecure-skip-tls-verify
 
-## Running unit tests
+######4)Add user details to your configuration file:
+kubectl config --kubeconfig=config-demo set-credentials developer --client-certificate=fake-cert-file --client-key=fake-key-seefile
+kubectl config --kubeconfig=config-demo set-credentials experimenter --username=exp --password=some-password
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+######5)Add context details to your configuration file:
+kubectl config --kubeconfig=config-demo set-context dev-frontend --cluster=development --namespace=frontend --user=developer
+kubectl config --kubeconfig=config-demo set-context dev-storage --cluster=development --namespace=storage --user=developer
+kubectl config --kubeconfig=config-demo set-context exp-scratch --cluster=scratch --namespace=default --user=experimenter
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+######6)kubectl config --kubeconfig=config-default use-context dev-frontend
